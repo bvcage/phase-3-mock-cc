@@ -12,10 +12,13 @@ Dev.create(name: "Gazorpazop")
 
 puts "Creating freebies..."
 
-# ***************************************************************
-# * TODO: create freebies! Remember, a freebie belongs to a dev *
-# * and a freebie belongs to a company.                         *
-# ***************************************************************
-# Create freebies Here
+10.times do 
+   Freebie.create(
+      dev_id: rand(1..4),
+      company_id: rand(1..4),
+      item_name: Faker::Commerce.product_name,
+      value: rand(1..10)
+   )
+end
 
 puts "Seeding done!"
